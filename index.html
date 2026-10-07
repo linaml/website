@@ -3,261 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lina M. — AI & NLP</title>
+    <title>Lina Mnemoi - ML, AI &amp; Data </title>
+    <meta name="description" content="Lina Mnemoi — Master's student in Machine Learning, AI and Data Science (Sorbonne Université). NLP, deep learning, neural signals. Looking for a 6-month internship from March 2027.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <meta name="description" content="Lina M. — Master's student in AI and Data Science, NLP focus.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- NAV -->
-    <header>
-        <a href="#home" class="logo">Lina M.</a>
-
-        <nav>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#contact" class="nav-link">Contact</a>
+<header class="site-header">
+    <div class="wrap">
+        <a href="#top" class="logo">Lina Mnemoi</a>
+        <nav aria-label="Main">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <!-- HERO / HOME -->
-    <section id="home" class="home_content">
-        <img class="hero-bloom" src="img/pink.png" alt="" aria-hidden="true">
+<main id="top">
 
-        <p class="eyebrow">Lina M.</p>
-        <h1>Master's in AI &amp; Data Science</h1>
-        <p class="hero-text">Second-year at Sorbonne Université, working mostly at the intersection of NLP and knowledge representation. Looking for a final-year internship, March–August 2027.</p>
-
-        <div class="hero-links">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:u36lm24@abdn.ac.uk">Email</a>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="wrap">
+            <div>
+                <!--<p class="eyebrow">Lina Mnemoi</p> -->
+                <h1><em>Machine learning, AI & Data Science</em>.</h1>
+                <p class="hero-text">Final year master's student in Machine Learning, AI and Data Science at Sorbonne Université, with a background in Computer Science and Literature. I work on NLP, deep learning and neural signal decoding. I aim to apply machine learning and AI to real world problems.</p>
+                <span class="chip">Looking for a 6-month internship, from March 2027, in Paris</span>
+                <div class="hero-links">
+                    <a href="mailto:lina.mnemoi@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/lina-mnemoi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/linaml" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="reports/cv-lina-mnemoi.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+                </div>
+            </div>
+            <img class="hero-flower" src="img/pink.png" alt="" aria-hidden="true" onerror="this.remove()">
         </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section section-tint">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="experience-entry">
-            <div class="edu-entry-top">
-                <h3>Research Intern</h3>
-                <span class="edu-year">June – July 2026</span>
-            </div>
-            <p class="edu-place">Universitat Politècnica de València — Decoding spoken words from intracranial activity</p>
-            <p class="edu-detail">[Placeholder — 3-4 lignes : contexte du labo, ce que tu as fait concrètement, méthode/outils utilisés, résultat ou apprentissage clé.]</p>
+    <section id="experience" class="tint">
+        <div class="wrap reveal">
+            <div class="sec-head"><h2>Experience</h2></div>
+            <article class="entry">
+                <div class="entry-top">
+                    <h3>Research Intern - Neural Speech Decoding</h3>
+                    <span class="when">June - July 2026</span>
+                </div>
+                <p class="where">Universitat Politècnica de València, supervised by D. Gimeno-Gómez and P. Rosso</p>
+                <ul>
+                    <li>Research project comparing linear regression and transformer for speech decoding: from neural signals to speech spectrograms</li>
+                    <li>Reconstructed speech spectrograms from intracranial (sEEG) recordings of 10 participants, starting from a reproduced linear baseline.</li>
+                    <li>Designed a Transformer encoder in PyTorch that beats the baseline: Pearson correlation of 0.77 vs. 0.68 at equal context.</li>
+                    <li>Analysed temporal context, PCA and electrode importance (SHAP, Destrieux atlas). Collaboration ongoing on phoneme and word classification.</li>
+                    <li>Limit: reconstructed audio is not yet intelligible. Ongoing work on phoneme and word classification with the supervisors.</li>
+                </ul>
+                <button class="link-btn" data-open="valencia">Read more and report →</button>
+            </article>
         </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-intro">Six projects, six flowers. Click one to read more.</p>
+    <section id="projects">
+        <div class="wrap reveal">
+            <div class="sec-head"><h2>Projects</h2><span class="sec-note">Click a flower for details and the report</span></div>
+            <div class="cards">
+                <button class="card" data-open="nlp">
+                    <img src="img/pink.png" alt="">
+                    <div>
+                        <h3>Style &amp; Sentiment Classification</h3>
+                        <p>When is a Transformer worth its cost? CamemBERT and DistilBERT vs. classical baselines.</p>
+                        <div class="tags"><span class="tag">NLP</span><span class="tag">PyTorch</span><span class="tag">Hugging Face</span></div>
+                    </div>
+                </button>
+                <button class="card" data-open="ted">
+                    <img src="img/orange.png" alt="">
+                    <div>
+                        <h3>Can you plan a TED Talk's virality?</h3>
+                        <p>7,300 scraped talks, a leakage-safe pipeline and an XGBoost model.</p>
+                        <div class="tags"><span class="tag">Python</span><span class="tag">Web scraping</span><span class="tag">XGBoost</span></div>
+                    </div>
+                </button>
+                <button class="card" data-open="polyps">
+                    <img src="img/white.png" alt="">
+                    <div>
+                        <h3>Clinical Data Integration</h3>
+                        <p>22 polyp databases unified into one queryable knowledge graph.</p>
+                        <div class="tags"><span class="tag">ETL</span><span class="tag">RDF</span><span class="tag">SPARQL</span></div>
+                    </div>
+                </button>
+                <button class="card" data-open="bird">
+                    <img src="img/red.png" alt="">
+                    <div>
+                        <h3>BirdCLEF+ 2026</h3>
+                        <p>Acoustic classification of 234 species from soundscapes.</p>
+                        <div class="tags"><span class="tag">Audio</span><span class="tag">librosa</span><span class="tag">scikit-learn</span></div>
+                    </div>
+                </button>
+                <button class="card" data-open="dino">
+                    <img src="img/green.png" alt="">
+                    <div>
+                        <h3>Were t-rexes green?  <span class="tag status">Ongoing</span></h3>
+                        <p>Animal image generation from skeleteons.</span></p>
+                        <div class="tags"><span class="tag">Computer vision</span><span class="tag">Generative AI</span><span class="tag">Data Curation</span></div>
+                    </div>
+                </button>
+                <button class="card" data-open="bubble">
+                    <img src="img/yellow.png" alt="">
+                    <div>
+                        <h3>Outside the AI Bubble</h3>
+                        <p>Personal projects.</p>
+                        <div class="tags"><span class="tag">Sport</span><span class="tag">Hobbies</span></div>
+                    </div>
+                </button>
+                
+            </div>
+        </div>
+    </section>
 
-        <div class="flower-grid">
-            <div class="flower-card" onclick="openLightbox('p1')">
-                <img src="img/orange.png" alt="Ted Talk project flower">
-                <div class="flower-label">What Makes a Ted Talk Go Viral?</div>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Web Scraping</span>
-                    <span class="tag">XGBoost</span>
+    <!-- EDUCATION -->
+    <section id="education" class="tint">
+        <div class="wrap reveal">
+            <div class="sec-head"><h2>Education</h2></div>
+            <div class="edu">
+                <div class="edu-row">
+                    <h3>Master MIND - Machine Learning, AI and Data Science</h3><span class="when">2025 - 2027</span>
+                    <p>Sorbonne Université, Paris<br>
+                    <b>Year 1:</b> Probabilistic models · Statistical learning · Optimization &amp; graph algorithms · Knowledge representation · NLP<br>
+                    <b>Year 2:</b> Deep learning · LLM · Computer vision · Explainable AI · Data science and research methodology (MLOps, Docker, automated evaluation of LLMs and agents)</p>
                 </div>
-            </div>
-            <div class="flower-card" onclick="openLightbox('p2')">
-                <img src="img/white.png" alt="Polyps project flower">
-                <div class="flower-label">Medical Data Integration <span class="tag tag-status">Ongoing</span></div>
-                <div class="tags">
-                    <span class="tag">RDF/Turtle</span>
-                    <span class="tag">SPARQL</span>
-                    <span class="tag">Knowledge Graphs</span>
+                <div class="edu-row">
+                    <h3>Double Bachelor's in Computer Science and Literature</h3><span class="when">2022 - 2025</span>
+                    <p>Sorbonne Université, Paris · 15.43/20, High Honours (Mention Bien)</p>
                 </div>
-            </div>
-            <div class="flower-card" onclick="openLightbox('p3')">
-                <img src="img/pink.png" alt="Sentiment analysis project flower">
-                <div class="flower-label">Sentiment Analysis &amp; Authorship</div>
-                <div class="tags">
-                    <span class="tag">NLP</span>
-                    <span class="tag">Transformers</span>
-                    <span class="tag">PyTorch</span>
+                <div class="edu-row">
+                    <h3>Semester abroad</h3><span class="when">Jan - May 2025</span>
+                    <p>University of Aberdeen, Scotland</p>
                 </div>
-            </div>
-            <div class="flower-card" onclick="openLightbox('p4')">
-                <img src="img/green.png" alt="Outside the AI bubble project flower">
-                <div class="flower-label">Outside the AI Bubble</div>
-                <div class="tags">
-                    <span class="tag">Personal</span>
-                </div>
-            </div>
-            <div class="flower-card" onclick="openLightbox('p5')">
-                <img src="img/red.png" alt="BirdCLEF project flower">
-                <div class="flower-label">BirdCLEF</div>
-                <div class="tags">
-                    <span class="tag">Audio</span>
-                    <span class="tag">CNN</span>
-                    <span class="tag">Classification</span>
-                </div>
-            </div>
-            <div class="flower-card" onclick="openLightbox('p6')">
-                <img src="img/yellow.png" alt="Dinosaurs project flower">
-                <div class="flower-label">Dinosaurs <span class="tag tag-status">Ongoing</span></div>
-                <div class="tags">
-                    <span class="tag">Computer Vision</span>
-                    <span class="tag">Generative AI</span>
+                <div class="edu-row">
+                    <h3>French Baccalauréat specialized in Mathematics and Humanities</h3><span class="when">2022</span>
+                    <p>Lycée Epin, Vitry-sur-Seine · Highest Honours (Mention Très Bien), 17.57/20</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="lightbox" id="lightbox-p1">
-        <div class="lightbox-content">
-            <span class="close" onclick="closeLightbox('p1')">&times;</span>
-            <h3>What Makes a Ted Talk Go Viral?</h3>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Web Scraping</span><span class="tag">XGBoost</span></div>
-            <p>Web scraping, data cleansing and analysis of TED Talk transcripts and metadata.<br>
-            Linear Regression baseline, then RandomForest and XGBoost models to predict view counts.<br><br>
-            [Placeholder — dataset size, key finding, what you'd improve.] <br><br>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">View code</a></p>
-        </div>
-    </div>
-
-    <div class="lightbox" id="lightbox-p2">
-        <div class="lightbox-content">
-            <span class="close" onclick="closeLightbox('p2')">&times;</span>
-            <h3>Medical Data Integration for Colorectal Polyp Analysis</h3>
-            <div class="tags"><span class="tag">RDF/Turtle</span><span class="tag">SPARQL</span><span class="tag">Knowledge Graphs</span><span class="tag tag-status">Ongoing</span></div>
-            <p>Building a unified RDF/Turtle knowledge graph over heterogeneous clinical databases.<br>
-            Developing an image processing pipeline for duplicate detection and a SPARQL query interface for downstream machine learning in oncology.<br><br>
-            [Placeholder — lab/team, current status.]</p>
-        </div>
-    </div>
-
-    <div class="lightbox" id="lightbox-p3">
-        <div class="lightbox-content">
-            <span class="close" onclick="closeLightbox('p3')">&times;</span>
-            <h3>Sentiment Analysis &amp; Authorship Attribution</h3>
-            <div class="tags"><span class="tag">NLP</span><span class="tag">Transformers</span><span class="tag">PyTorch</span></div>
-            <p>[Placeholder — task setup, dataset, models tried, result.]</p>
-        </div>
-    </div>
-
-    <div class="lightbox" id="lightbox-p4">
-        <div class="lightbox-content">
-            <span class="close" onclick="closeLightbox('p4')">&times;</span>
-            <h3>Outside the AI Bubble</h3>
-            <div class="tags"><span class="tag">Personal</span></div>
-            <p>[Placeholder — a short note on what this project actually is, since it's the odd one out among the technical ones.]</p>
-        </div>
-    </div>
-
-    <div class="lightbox" id="lightbox-p5">
-        <div class="lightbox-content">
-            <span class="close" onclick="closeLightbox('p5')">&times;</span>
-            <h3>BirdCLEF</h3>
-            <div class="tags"><span class="tag">Audio</span><span class="tag">CNN</span><span class="tag">Classification</span></div>
-            <p>[Placeholder — task, audio features/model used, result or leaderboard rank if applicable.]</p>
-        </div>
-    </div>
-
-    <div class="lightbox" id="lightbox-p6">
-        <div class="lightbox-content">
-            <span class="close" onclick="closeLightbox('p6')">&times;</span>
-            <h3>Dinosaurs</h3>
-            <div class="tags"><span class="tag">Computer Vision</span><span class="tag">Generative AI</span><span class="tag tag-status">Ongoing</span></div>
-            <p>[Placeholder — what the project is, current stage.]</p>
-        </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <section id="education" class="section section-tint">
-        <h2 class="section-title">Education</h2>
-
-        <div class="edu-list">
-            <div class="edu-entry">
-                <div class="edu-entry-top">
-                    <h3>Master MIND — Machine Learning, AI and Data Science</h3>
-                    <span class="edu-year">2025 – 2027</span>
-                </div>
-                <p class="edu-place">Sorbonne Université, Paris</p>
-                <p class="edu-detail">Probabilistic models · Statistical learning · Optimization &amp; graph algorithms · Knowledge representation · Deep learning</p>
-            </div>
-
-            <div class="edu-entry">
-                <div class="edu-entry-top">
-                    <h3>Double Bachelor's Degree in Computer Science and Literature</h3>
-                    <span class="edu-year">2022 – 2025</span>
-                </div>
-                <p class="edu-place">Sorbonne Université, Paris</p>
-                <p class="edu-detail">Data Structures, Networks and Algorithms on the CS side; Comparative Literature, Stylistics and writing courses on the Literature side. Final grade: 15.43/20, High Honours (Mention Bien).</p>
-            </div>
-
-            <div class="edu-entry">
-                <div class="edu-entry-top">
-                    <h3>Semester Abroad</h3>
-                    <span class="edu-year">Jan – May 2025</span>
-                </div>
-                <p class="edu-place">University of Aberdeen, Scotland</p>
-            </div>
-
-            <div class="edu-entry">
-                <div class="edu-entry-top">
-                    <h3>French Baccalauréat, specialised in Mathematics and Humanities-Literature-Philosophy</h3>
-                    <span class="edu-year">2022</span>
-                </div>
-                <p class="edu-place">Lycée Epin, Vitry-sur-Seine</p>
-                <p class="edu-detail">Highest Honours (Mention Très Bien), 17.57/20. 20/20 in the Mathematics exam.</p>
-            </div>
+    <!-- TOOLBOX -->
+    <section id="toolbox">
+        <div class="wrap reveal">
+            <div class="sec-head"><h2>Toolbox</h2><span class="sec-note">French (native) · English C1 (fluent) ·  Spanish B1 (intermediate)</span></div>
+            <dl class="toolbox">
+                <div><dt>Languages</dt><dd>Python, SQL, SPARQL, JavaScript, C</dd></div>
+                <div><dt>ML &amp; NLP</dt><dd>PyTorch, Hugging Face, scikit-learn, XGBoost, SHAP, cross-validation, class imbalance</dd></div>
+                <div><dt>Signal &amp; data</dt><dd>librosa, SciPy, pandas, NumPy, BeautifulSoup, Rdflib, Matplotlib, Seaborn</dd></div>
+                <div><dt>Environment</dt><dd>Linux, Git/GitHub, Jupyter, Google Colab</dd></div>
+            </dl>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
-        <img class="contact-flower" src="img/pink.png" alt="" aria-hidden="true">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-intro">Always happy to talk about NLP, internships, or crochet patterns.</p>
-
-        <div class="contact-links">
-            <a href="mailto:u36lm24@abdn.ac.uk">u36lm24@abdn.ac.uk</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <section id="contact" class="tint contact">
+        <div class="wrap reveal">
+            <img src="img/pink.png" alt="" aria-hidden="true" onerror="this.remove()">
+            <h2>Contact me</h2>
+            <p>Open to discuss the data world, AI, internships and the weather.</p>
+            <div class="contact-links">
+                <a href="mailto:lina.mnemoi@gmail.com">lina.mnemoi@gmail.com</a>
+                <a href="https://www.linkedin.com/in/lina-mnemoi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/linaml" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
         </div>
     </section>
+</main>
 
-    <script>
-        // progressive enhancement flag for scroll-reveal
-        document.documentElement.classList.add('js');
+<footer>© 2026 Lina Mnemoi</footer>
 
-        function openLightbox(id) {
-            document.getElementById('lightbox-' + id).classList.add('active');
-        }
-        function closeLightbox(id) {
-            document.getElementById('lightbox-' + id).classList.remove('active');
-        }
-        document.querySelectorAll('.lightbox').forEach(function(box){
-            box.addEventListener('click', function(e){
-                if (e.target === box) { box.classList.remove('active'); }
-            });
-        });
+<!-- Single modal, filled from the PROJECTS object below -->
+<dialog id="modal" aria-labelledby="m-title">
+    <button class="m-close" aria-label="Close" data-close>&times;</button>
+    <div class="m-body">
+        <h3 id="m-title"></h3>
+        <div class="tags" id="m-tags"></div>
+        <p class="m-lead" id="m-lead"></p>
+        <ul class="m-points" id="m-points"></ul>
+        <div class="m-actions" id="m-actions"></div>
+        <div class="report" id="m-report"><div class="report-inner" id="m-report-inner"></div></div>
+    </div>
+</dialog>
 
-        // scroll-reveal: gold line draws down + content fades in, once, per entry
-        const revealEls = document.querySelectorAll('.edu-entry, .experience-entry');
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
-            revealEls.forEach((el) => observer.observe(el));
-        } else {
-            revealEls.forEach((el) => el.classList.add('in-view'));
-        }
-    </script>
+<script>
+document.documentElement.classList.add('js');
 
+/* ------------------------------------------------------------------
+   CONTENT — edit here. `report` = path of the PDF (put it in /reports).
+   If the file is missing, the page shows a dashed placeholder instead.
+   Set report to null to hide the report button. `code` = repo URL or null.
+------------------------------------------------------------------- */
+const PROJECTS = {
+    valencia: {
+        title: 'Neural Speech Decoding from sEEG',
+        tags: ['PyTorch', 'Transformers', 'SHAP', 'Research'],
+        lead: 'Research internship at Universitat Politècnica de València, on a public Dutch word-production dataset.',
+        points: [
+        ],
+        report: 'reports/valencia-seeg-report.pdf', code: null
+    },
+    nlp: {
+        title: 'Style & Sentiment Classification',
+        tags: ['NLP', 'PyTorch', 'Hugging Face', 'scikit-learn'],
+        lead: 'Two text-classification tasks, four models, one question: when is a Transformer worth its cost?',
+        points: [
+            'Authorship: Chirac vs. Mitterrand speeches, about 57,000 sentences with a 6.6:1 imbalance, extended with 400 additional speeches.',
+            'Sentiment: 27,000 movie reviews, half positive, half negative.',
+            'CamemBERT-large and DistilBERT (Hugging Face Trainer, Colab) vs. TF-IDF/SVM and a Bi-LSTM (PyTorch), across four preprocessing levels with GridSearchCV.',
+            'Style: CamemBERT-large reaches F1 0.73 vs. 0.68 for the SVM and 0.52 for the Bi-LSTM.',
+            'Sentiment: the SVM matches DistilBERT (F1 around 0.91-0.92) at a far lower computational cost.'
+        ],
+        report: 'reports/nlp-style-sentiment-report.pdf', code: null
+    },
+    ted: {
+        title: 'Can You Plan TED Talk Virality? ',
+        tags: ['Python', 'Web scraping', 'XGBoost', 'EDA'],
+        lead: 'Scraped, enriched and modelled 7,300 TED talks to predict which ones go viral.',
+        points: [
+            'Scraped 7,352 talks (6,396 with transcripts) with BeautifulSoup, enriched with Wikipedia speaker data.',
+            'Target: top 10% of a popularity score normalised for publication date.',
+            'BorderlineSMOTE and undersampling for imbalance; 80/20 temporal split and leakage-safe speaker-history features.',
+            'XGBoost recalls 73% of viral talks, with an F1 2.9* better than random (PR-AUC 0.21): a hard problem, evaluated honestly.',
+            'Cumulative-gain curve and editorial recommendations.'
+        ],
+        report: 'reports/ted-virality-report.pdf', code: null
+    },
+    polyps: {
+        title: 'Clinical Data Integration Platform',
+        tags: ['ETL', 'RDF/Turtle', 'SPARQL', 'JavaScript'],
+        lead: 'Unifying 22 clinical databases on colorectal polyps into one knowledge graph that can be queried.',
+        points: [
+            'Dedicated parsers and terminology normalisation feeding an RDF graph of more than one million triples (Python, Rdflib).',
+            'Web interface with a Query Builder and a statistics page, running SPARQL in the browser (N3.js, Comunica).',
+            'Indexing brings queries from tens of minutes down to 50-370 ms.',
+            'Integration guide to add new data sources.'
+        ],
+        report: 'reports/polyps-integration-report.pdf', code: null
+    },
+    bird: {
+        title: 'BirdCLEF+ 2026',
+        tags: ['Audio', 'librosa', 'scikit-learn', 'Signal processing'],
+        lead: 'Kaggle challenge: identify 234 species from Pantanal soundscapes.',
+        points: [
+            'Additional challenge: use limited to machine learning (no deep learning models)',
+            'Audio pipeline: 32 kHz resampling, 5 s windows, MFCC and spectral features, PCA/t-SNE diagnostics.',
+            'One-vs-Rest classifiers (logistic regression, Random Forest, Gradient Boosting) with a tuned decision threshold.',
+            'Best model: Random Forest, micro-F1 0.42. Rare species stay hard (macro-F1 around 0.02).'
+        ],
+        report: 'reports/birdclef-report.pdf', code: 'https://github.com/linaml/birdclef-2026-ml'
+    },
+    bubble: {
+        title: 'Outside the AI Bubble',
+        tags: ['Personal'],
+        lead: [
+            'Hobbies: Knitting, Calisthenics, Crochet'
+        ],
+        points: [], report: null, code: null
+    },
+    dino: {
+        title: 'Were t-rexes green?',
+        tags: ['Computer vision', 'Generative AI', 'Dataset Curation', 'Ongoing'],
+        lead: ' Animal image generation from skeleteons',
+        points : ['What happens if we feed a model with skeleteon representation along with the animals appearance? Can it learn what other animals look like without having ever seeing one?',
+        'Current work: dataset curation (creating 3D models for each animal )' ],
+        
+        report: null, code: null
+    }
+};
+
+const modal = document.getElementById('modal');
+const $ = (id) => document.getElementById(id);
+let reportOpen = false;
+
+function openModal(key) {
+    const p = PROJECTS[key]; if (!p) return;
+    $('m-title').textContent = p.title;
+    $('m-tags').innerHTML = p.tags.map(t => '<span class="tag' + (t === 'Ongoing' ? ' status' : '') + '">' + t + '</span>').join('');
+    $('m-lead').textContent = p.lead;
+    $('m-points').innerHTML = p.points.map(x => '<li>' + x + '</li>').join('');
+
+    const actions = $('m-actions'); actions.innerHTML = '';
+    if (p.report) {
+        const b = document.createElement('button');
+        b.className = 'link-btn'; b.textContent = 'Read the report ↓';
+        b.addEventListener('click', () => toggleReport(p, b));
+        actions.appendChild(b);
+        const a = document.createElement('a');
+        a.href = p.report; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = 'Open PDF ↗';
+        actions.appendChild(a);
+    }
+    if (p.code) {
+        const a = document.createElement('a');
+        a.href = p.code; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = 'View code ↗';
+        actions.appendChild(a);
+    }
+    reportOpen = false;
+    $('m-report').classList.remove('open'); $('m-report-inner').innerHTML = '';
+    document.body.classList.add('modal-open');
+    modal.showModal();
+    modal.querySelector('.m-body').scrollTop = 0;
+}
+
+function toggleReport(p, btn) {
+    const box = $('m-report'), inner = $('m-report-inner');
+    reportOpen = !reportOpen;
+    if (reportOpen) {
+        // <object> falls back to its inner content if the PDF is missing or cannot be shown
+        inner.innerHTML = '<object data="' + p.report + '#view=FitH" type="application/pdf">' +
+            '<div class="placeholder"><div>Report placeholder.<br>Drop the PDF at <code>' + p.report + '</code> and it will show up here.</div></div></object>';
+        btn.textContent = 'Hide the report ↑';
+    } else {
+        btn.textContent = 'Read the report ↓';
+    }
+    box.classList.toggle('open', reportOpen);
+}
+
+document.querySelectorAll('[data-open]').forEach(el => el.addEventListener('click', () => openModal(el.dataset.open)));
+modal.addEventListener('click', (e) => { if (e.target === modal || e.target.hasAttribute('data-close')) modal.close(); });
+modal.addEventListener('close', () => { document.body.classList.remove('modal-open'); $('m-report-inner').innerHTML = ''; });
+
+/* soft reveal, once per section */
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+} else { reveals.forEach(el => el.classList.add('in')); }
+
+/* active nav link */
+const links = [...document.querySelectorAll('nav a')];
+if ('IntersectionObserver' in window) {
+    const so = new IntersectionObserver((es) => es.forEach(e => {
+        if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach(l => { const s = document.querySelector(l.getAttribute('href')); if (s) so.observe(s); });
+}
+</script>
 </body>
 </html>
